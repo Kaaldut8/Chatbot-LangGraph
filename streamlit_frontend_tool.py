@@ -57,7 +57,7 @@ for thread_id in st.session_state["chat_threads"][::-1]:
 # Render history
 for message in st.session_state["message_history"]:
     with st.chat_message(message["role"]):
-        st.text(message["content"])
+        st.markdown(message["content"])
 
 user_input = st.chat_input("Type here")
 
